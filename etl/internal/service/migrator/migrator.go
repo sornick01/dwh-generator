@@ -13,7 +13,6 @@ import (
 
 type Migrator struct {
 	validator *validator.Validator
-	//routes    *domain.Routes
 	repo *repository.Repository
 }
 
@@ -26,7 +25,6 @@ func NewMigrator(val *validator.Validator, repo *repository.Repository) *Migrato
 
 // Migrate - запуск миграции данных
 func (m *Migrator) Migrate(ctx context.Context, routes *domain.Routes) error {
-	// TODO: сделать получение кол-ва строк из исходной таблицы
 	if routes == nil {
 		return errors.New("empty routes")
 	}
@@ -46,8 +44,6 @@ func (m *Migrator) Migrate(ctx context.Context, routes *domain.Routes) error {
 	}
 	// миграция данных батчами
 	for i := 0; i < rowsCount; i += config.BatchSize {
-		// TODO: добавить тело цикла в транзакцию ???
-		//select
 		var rows []map[string]interface{}
 		srcColumnsList := routes.ListSrcColumns()
 		srcColumns := strings.Join(srcColumnsList, ",")

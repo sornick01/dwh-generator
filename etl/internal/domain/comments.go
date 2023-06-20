@@ -11,7 +11,6 @@ const (
 	tableType      = "table"
 	columnType     = "column"
 	constraintType = "constraint"
-	//indexType      = "index"
 )
 
 type Comment struct {

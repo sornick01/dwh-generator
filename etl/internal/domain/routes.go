@@ -4,27 +4,6 @@ import (
 	"fmt"
 )
 
-//type Column struct {
-//	NameOrValue string  `json:"name_or_value"`
-//	As          *string `json:"as,omitempty"`
-//}
-
-//type Row struct {
-//	//Schema *string `json:"schema,omitempty"`
-//	Table  string  `json:"table"`
-//	Column string  `json:"column"`
-//	As     *string `json:"as,omitempty"`
-//}
-
-//type Additions struct {
-//	Where   *string `json:"where,omitempty"`
-//	GroupBy *string `json:"groupBy,omitempty"`
-//	Having  *string `json:"having,omitempty"`
-//	OrderBy *string `json:"orderBy,omitempty"`
-//	Limit   *string `json:"limit,omitempty"`
-//	Offset  *string `json:"offset,omitempty"`
-//}
-
 // Route - маршрут одной колонки
 type Route struct {
 	Source      string `json:"source"`      // Колонка источник

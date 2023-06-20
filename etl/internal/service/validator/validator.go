@@ -41,24 +41,20 @@ func (v *Validator) Run(ctx context.Context, rows []map[string]interface{}) ([]m
 
 func (v *Validator) validateRAW() []validateFunc {
 	return []validateFunc{
-		// TODO: добавить проверок для RAW
 	}
 }
 
 func (v *Validator) validateODS() []validateFunc {
 	return []validateFunc{
-		// TODO: добавить проверок для ODS
 	}
 }
 
 func (v *Validator) validateDDS() []validateFunc {
 	return []validateFunc{
-		// TODO: добавить проверок для DDS
 	}
 }
 
 func (v *Validator) validateDM() []validateFunc {
 	return []validateFunc{
-		// TODO: добавить проверок для DM
 	}
 }

@@ -15,13 +15,6 @@ const (
 	OneToOne   RelationType = "one_to_one"
 	OneToMany  RelationType = "one_to_many"
 	ManyToMany RelationType = "many_to_many"
-	//Cascade         OnActionType  = "cascade"
-	//Restrict        OnActionType  = "restrict"
-	//SetNull         OnActionType  = "set null"
-	//SetDefault      OnActionType  = "set default"
-	//NoAction        OnActionType  = "no action"
-	//DeleteOperation OperationType = "delete"
-	//UpdateOperation OperationType = "update"
 )
 
 type OnDeleteUpdate struct {

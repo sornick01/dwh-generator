@@ -186,35 +186,6 @@ func (r *Repository) applyFilters(ctx context.Context, query sq.SelectBuilder, f
 	return query
 }
 
-//func (r *Repository) WithTransaction(ctx context.Context, fn func(tx Tx) error) (err error) {
-//	return r.WithTx(ctx, pgx.TxOptions{}, fn)
-//}
-//
-//func (r *Repository) WithTx(ctx context.Context, options pgx.TxOptions, fn func(tx Tx) error) (err error) {
-//	tx, err := r.dest.BeginTx(ctx, options)
-//	if err != nil {
-//		return
-//	}
-//
-//	defer func() {
-//		if p := recover(); p != nil {
-//			// a panic occurred, rollback and repanic
-//			_ = tx.Rollback(ctx)
-//			panic(p)
-//		} else if err != nil {
-//			// something went wrong, rollback
-//			_ = tx.Rollback(ctx)
-//		} else {
-//			// all good, commit
-//			err = tx.Commit(ctx)
-//		}
-//	}()
-//
-//	err = fn(tx)
-//
-//	return
-//}
-
 func psql() sq.StatementBuilderType {
 	return sq.StatementBuilder.PlaceholderFormat(sq.Dollar)
 }
